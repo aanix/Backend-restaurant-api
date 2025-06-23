@@ -1,16 +1,16 @@
 const createError = require('http-errors')
-const Model = require('../Models/Restaurant.Model.js')
+const Model = require('../Models/Reception.Model.js')
 const mongoose = require('mongoose')
-const ModelName = 'Restaurant'
+const ModelName = 'Reception'
 
-//Restaurant logic
+//Reception logic
 module.exports = {
-  create: async (req, res, next) => {  //Contains the logic for handling API requests 
+  create: async (req, res, next) => {
     try {
       const data = req.body
       const newData = new Model(data)
       const result = await newData.save()
-      res.json(result)  // Send the saved data response
+      res.json(result)
     } catch (error) {
       next(error)
     }
@@ -34,7 +34,7 @@ module.exports = {
 
   list: async (req, res, next) => {
     try {
-      const result = await Model.find();
+      const result = await Model.find()
       return res.json(result)
     } catch (error) {
       next(error)

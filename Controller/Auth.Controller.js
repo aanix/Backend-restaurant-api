@@ -8,6 +8,8 @@ const {
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
+//	Login/Register logic
+
 module.exports = {
 
     register: async (req, res, next) => {

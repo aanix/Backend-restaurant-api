@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/auth", require("./Routes/Auth.Route"));
 
 app.use("/restaurants", require("./Routes/Restaurant.Route"));
+app.use("/receptions", require("./Routes/Reception.Route"));
 
 
 app.get("/", async (req, res, next) => {
