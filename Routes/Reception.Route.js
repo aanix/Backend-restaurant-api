@@ -11,4 +11,4 @@ router.delete('/:id', verifyAccessToken, Controller.delete)
 router.get('/:id', Controller.get)
 router.get('/', Controller.list)
 
-module.exports = router // route ko export kr skte hain kisi bhi file me
+module.exports = router // route ko export kr skte hain kisi bhi file me, isme bhi contact krdo

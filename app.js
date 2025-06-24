@@ -17,6 +17,7 @@ app.use("/auth", require("./Routes/Auth.Route"));
 
 app.use("/restaurants", require("./Routes/Restaurant.Route"));
 app.use("/receptions", require("./Routes/Reception.Route"));
+app.use("/contacts", require("./Routes/Contact.Route"));
 
 
 app.get("/", async (req, res, next) => {
